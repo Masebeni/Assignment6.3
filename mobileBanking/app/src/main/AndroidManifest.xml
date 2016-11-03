@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ferin.atm">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".services.login.impl.LoginServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.client.impl.ClientServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.account.impl.RetrieveAccountInfoImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.account.impl.ValidateWithdrawServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.client.impl.PremiumServiceImpl"
+            android:exported="false" />
+        <service
+            android:name=".services.account.impl.ValidatePinServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.transaction.impl.TransactionServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.client.impl.StudentServiceImpl"
+            android:exported="false" />
+        <service
+            android:name=".services.client.impl.ValidateAccountNumberServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddClientActivity" />
+
+        <service
+            android:name=".services.client.impl.RetrieveClientInfoImpl"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ConfirmActivity" />
+        <activity android:name=".DisplayAllActivity" />
+
+        <service
+            android:name=".services.account.impl.GetAllAccountInfoImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.account.impl.SavingsServiceImpl"
+            android:exported="false"></service>
+    </application>
+
+</manifest>
